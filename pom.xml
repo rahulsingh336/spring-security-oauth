@@ -25,8 +25,8 @@
 	</properties>
 
 	<modules>
-		<module>auth-service</module>
-		<module>balance-service</module>
+		<module>authservice</module>
+		<module>balanceservice</module>
 	</modules>
 
 	<build>
