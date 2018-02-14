@@ -2,7 +2,13 @@
 
 1.) Postman request:- 
 
-http://localhost:9181/uaa/oauth/token?password=boot&username=spring&grant_type=password&scope=openid&client_id=html5&client_secret=password
+   a.) get auth-code
+   http://localhost:9181/auth/oauth/authorize?response_type=code&client_id=html5&redirect_uri=http://google.com
+   
+   b.) get access-toke
+   http://localhost:9181/auth/oauth/token?client_id=html5&client_secret=password&grant_type=authorization_code&code=LTbmG0&redirect_uri=http://google.com
+   
+   
 
 with basic authorization header for username and password configured.
 

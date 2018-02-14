@@ -49,12 +49,6 @@ public class AuthServiceApplication {
 @EnableAuthorizationServer
 class AuthServiceConfiguration extends AuthorizationServerConfigurerAdapter{
 
-	private final AuthenticationManager authenticationManager;
-
-	AuthServiceConfiguration(AuthenticationManager authenticationManager) {
-		this.authenticationManager = authenticationManager;
-	}
-
 	@Override
 	public void configure(AuthorizationServerSecurityConfigurer oauthServer) throws Exception
 	{
@@ -70,20 +64,8 @@ class AuthServiceConfiguration extends AuthorizationServerConfigurerAdapter{
 				.authorizedGrantTypes("authorization_code","refresh_token")//, "authorization_code", "refresh_token")
 				.scopes("read", "write", "testApproval")
 				.accessTokenValiditySeconds(6000);
-				/*.authorizedGrantTypes("password")
-				.authorizedGrantTypes.add("refresh_token");
-        .authorizedGrantTypes.add("client_credentials");*/
-        		//.authorizedGrantTypes("authorization_code")
-				//.scopes("user_info");
-				/*.scopes("openid");*/
-
-
 	}
 
-	@Override
-	public void configure(AuthorizationServerEndpointsConfigurer endpoints) throws Exception {
-       endpoints.authenticationManager(authenticationManager);
-	}
 }
 
 @Service
