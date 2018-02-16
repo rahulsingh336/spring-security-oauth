@@ -43,8 +43,8 @@ public class CustomRouteFilter extends ZuulFilter {
         URL urlGet = null;
         URL urlPost = null;
         //try {
-            //domain1 = new URL("https://delivery-receipt-provider.apps.stl.pcfdev00.mastercard.int/deliveryreceipt/sap?customerId=666&status=ACCEPTD&msisdn=4RvdWNrClAWR92YGk9SNxpZcWIGgoEw4&orderId=102440035111506047909026&messageId=1234567890");
-            //domain2 = new URL("https://delivery-receipt-provider.apps.stl.pcfdev00.mastercard.int/deliveryreceipt/sap?customerId=666&status=ACCEPTD&msisdn=4RvdWNrClAWR92YGk9SNxpZcWIGgoEw4&orderId=102440035111506047909026&messageId=1234567890");
+            //domain1 = new URL("google.com");
+
             //urlGet = new URL(domain + "/get");
             //urlPost = new URL(domain + "/post");
         //} catch (MalformedURLException e) {
