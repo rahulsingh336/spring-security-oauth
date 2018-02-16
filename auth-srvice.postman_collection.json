@@ -1,0 +1,248 @@
+{
+	"variables": [],
+	"info": {
+		"name": "auth-srvice",
+		"_postman_id": "9867c05e-adfd-bed1-fd2d-b76986a2e58c",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Token Request",
+			"request": {
+				"url": {
+					"raw": "http://localhost:9181/auth/oauth/token?client_id=fooClientIdPassword&client_secret=secret&grant_type=password",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9181",
+					"path": [
+						"auth",
+						"oauth",
+						"token"
+					],
+					"query": [
+						{
+							"key": "client_id",
+							"value": "fooClientIdPassword",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "client_secret",
+							"value": "secret",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "grant_type",
+							"value": "password",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "code",
+							"value": "xXysDL",
+							"equals": true,
+							"description": "",
+							"disabled": true
+						},
+						{
+							"key": "redirect_uri",
+							"value": "http://google.com",
+							"equals": true,
+							"description": "",
+							"disabled": true
+						}
+					],
+					"variable": []
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic Zm9vQ2xpZW50SWRQYXNzd29yZDpzZWNyZXQ=",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "client_id",
+							"value": "fooClientIdPassword",
+							"type": "text",
+							"description": ""
+						},
+						{
+							"key": "client_secret",
+							"value": "secret",
+							"type": "text",
+							"description": ""
+						},
+						{
+							"key": "grant_type",
+							"value": "password",
+							"type": "text",
+							"description": ""
+						},
+						{
+							"key": "code",
+							"value": "xXysDL",
+							"type": "text",
+							"description": "",
+							"disabled": true
+						},
+						{
+							"key": "redirect_uri",
+							"value": "http://google.com",
+							"type": "text",
+							"description": "",
+							"disabled": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Token Request via ZuuL proxy",
+			"request": {
+				"url": {
+					"raw": "http://localhost:9180/oauth/auth/oauth/token?client_id=fooClientIdPassword&client_secret=secret&grant_type=password&username=john&password=123",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9180",
+					"path": [
+						"oauth",
+						"auth",
+						"oauth",
+						"token"
+					],
+					"query": [
+						{
+							"key": "client_id",
+							"value": "fooClientIdPassword",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "client_secret",
+							"value": "secret",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "code",
+							"value": "z4VEF0",
+							"equals": true,
+							"description": "",
+							"disabled": true
+						},
+						{
+							"key": "redirect_uri",
+							"value": "http://google.com",
+							"equals": true,
+							"description": "",
+							"disabled": true
+						},
+						{
+							"key": "grant_type",
+							"value": "password",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "username",
+							"value": "john",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "password",
+							"value": "123",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic Zm9vQ2xpZW50SWRQYXNzd29yZDpzZWNyZXQ=",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Rest Secured GET",
+			"request": {
+				"url": {
+					"raw": "http://localhost:9182/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9182",
+					"path": [
+						""
+					],
+					"query": [
+						{
+							"key": "code",
+							"value": "z4VEF0",
+							"equals": true,
+							"description": "",
+							"disabled": true
+						},
+						{
+							"key": "redirect_uri",
+							"value": "http://google.com",
+							"equals": true,
+							"description": "",
+							"disabled": true
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 1a078e4d-09e1-42b7-af96-47712a91ea46",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": "",
+						"disabled": true
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
