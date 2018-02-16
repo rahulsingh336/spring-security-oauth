@@ -42,14 +42,14 @@ public class CustomRouteFilter extends ZuulFilter {
         URL domain2 = null;
         URL urlGet = null;
         URL urlPost = null;
-        try {
-            domain1 = new URL("https://delivery-receipt-provider.apps.stl.pcfdev00.mastercard.int/deliveryreceipt/sap?customerId=666&status=ACCEPTD&msisdn=4RvdWNrClAWR92YGk9SNxpZcWIGgoEw4&orderId=102440035111506047909026&messageId=1234567890");
-            domain2 = new URL("https://delivery-receipt-provider.apps.stl.pcfdev00.mastercard.int/deliveryreceipt/sap?customerId=666&status=ACCEPTD&msisdn=4RvdWNrClAWR92YGk9SNxpZcWIGgoEw4&orderId=102440035111506047909026&messageId=1234567890");
+        //try {
+            //domain1 = new URL("https://delivery-receipt-provider.apps.stl.pcfdev00.mastercard.int/deliveryreceipt/sap?customerId=666&status=ACCEPTD&msisdn=4RvdWNrClAWR92YGk9SNxpZcWIGgoEw4&orderId=102440035111506047909026&messageId=1234567890");
+            //domain2 = new URL("https://delivery-receipt-provider.apps.stl.pcfdev00.mastercard.int/deliveryreceipt/sap?customerId=666&status=ACCEPTD&msisdn=4RvdWNrClAWR92YGk9SNxpZcWIGgoEw4&orderId=102440035111506047909026&messageId=1234567890");
             //urlGet = new URL(domain + "/get");
             //urlPost = new URL(domain + "/post");
-        } catch (MalformedURLException e) {
-            e.printStackTrace();
-        }
+        //} catch (MalformedURLException e) {
+          //  e.printStackTrace();
+        //}
 
         log.info(String.format("%s request to Route Filter %s", request.getMethod(),
                 request.getRequestURL().toString()));
