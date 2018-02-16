@@ -73,6 +73,7 @@ public class OAuth2AuthorizationServerConfig extends AuthorizationServerConfigur
         final DefaultTokenServices defaultTokenServices = new DefaultTokenServices();
         defaultTokenServices.setTokenStore(tokenStore());
         defaultTokenServices.setSupportRefreshToken(true);
+        //defaultTokenServices.setRefreshTokenValiditySeconds(60);
         return defaultTokenServices;
     }
 

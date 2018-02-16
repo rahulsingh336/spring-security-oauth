@@ -30,6 +30,7 @@
 	<modules>
 		<module>authservice</module>
 		<module>balanceservice</module>
+		<module>zuulproxy</module>
 	</modules>
 
 	<build>

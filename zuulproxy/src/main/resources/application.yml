@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: zuulproxy
+server:
+  port: 9180
+
+zuul:
+  routes:
+    test:
+      path: /redirect/**
+      url: http://google.com
+    foos:
+      path: /foos/**
+      url: http://localhost:9999/
+    oauth:
+      path: /oauth/**
+      url: http://localhost:9181/
